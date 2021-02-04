@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+# inisialisasi flask, bawaan framework sepertinya, harus seperti ini
 app = Flask(__name__)
 
 
@@ -22,5 +23,6 @@ def form_submit():
     return render_template('submit.html', username=submitted_username)
 
 
+# inisialisasi flask, bawaan framework sepertinya, harus seperti ini
 if __name__ == '__main__':
     app.run()
