@@ -13,8 +13,13 @@ def form():
 # supaya nerima data yang dikirim dari form disini
 @app.route('/submit', methods=['POST'])
 def form_submit():
-    username = request.form['username']
-    return render_template('submit.html', username=username)
+    # karena di form input kita namakan 'username', disini kita tulis 'username'
+    # untuk dapetin value yang ditulis user
+    submitted_username = request.form['username']
+
+    # di submit.html, kita ingin menampilkan data yang di submit
+    # karena disana kita tulis {{ username }}, maka kita tulis 'username'
+    return render_template('submit.html', username=submitted_username)
 
 
 if __name__ == '__main__':
